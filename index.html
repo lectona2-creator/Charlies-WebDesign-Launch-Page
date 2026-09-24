@@ -257,6 +257,15 @@
 
       .feature {
         padding: 22px 18px;
+        transform-origin: center center;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+
+      .feature-pulse {
+        animation: ctaPulse 1.8s cubic-bezier(0.37, 0, 0.63, 1);
+        will-change: transform;
       }
 
       .feature .icon {
@@ -284,6 +293,316 @@
       .cta {
         padding: 22px;
         text-align: center;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        transform-origin: center center;
+        transform: translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+      }
+
+      .cta-pulse {
+        animation: ctaPulse 1.8s cubic-bezier(0.37, 0, 0.63, 1);
+        will-change: transform;
+      }
+
+      @keyframes ctaPulse {
+        0% {
+          transform: scale(1) translateZ(0);
+        }
+        1% {
+          transform: scale(1.0008) translateZ(0);
+        }
+        2% {
+          transform: scale(1.001) translateZ(0);
+        }
+        3% {
+          transform: scale(1.0015) translateZ(0);
+        }
+        4% {
+          transform: scale(1.002) translateZ(0);
+        }
+        5% {
+          transform: scale(1.0027) translateZ(0);
+        }
+        6% {
+          transform: scale(1.003) translateZ(0);
+        }
+        7% {
+          transform: scale(1.0038) translateZ(0);
+        }
+        8% {
+          transform: scale(1.004) translateZ(0);
+        }
+        9% {
+          transform: scale(1.0048) translateZ(0);
+        }
+        10% {
+          transform: scale(1.005) translateZ(0);
+        }
+        11% {
+          transform: scale(1.0055) translateZ(0);
+        }
+        12% {
+          transform: scale(1.006) translateZ(0);
+        }
+        13% {
+          transform: scale(1.0065) translateZ(0);
+        }
+        14% {
+          transform: scale(1.007) translateZ(0);
+        }
+        15% {
+          transform: scale(1.0075) translateZ(0);
+        }
+        16% {
+          transform: scale(1.008) translateZ(0);
+        }
+        17% {
+          transform: scale(1.0085) translateZ(0);
+        }
+        18% {
+          transform: scale(1.009) translateZ(0);
+        }
+        19% {
+          transform: scale(1.0095) translateZ(0);
+        }
+        20% {
+          transform: scale(1.010) translateZ(0);
+        }
+        21% {
+          transform: scale(1.0105) translateZ(0);
+        }
+        22% {
+          transform: scale(1.011) translateZ(0);
+        }
+        23% {
+          transform: scale(1.0115) translateZ(0);
+        }
+        24% {
+          transform: scale(1.012) translateZ(0);
+        }
+        25% {
+          transform: scale(1.0125) translateZ(0);
+        }
+        26% {
+          transform: scale(1.013) translateZ(0);
+        }
+        27% {
+          transform: scale(1.0135) translateZ(0);
+        }
+        28% {
+          transform: scale(1.014) translateZ(0);
+        }
+        29% {
+          transform: scale(1.0145) translateZ(0);
+        }
+        30% {
+          transform: scale(1.015) translateZ(0);
+        }
+        31% {
+          transform: scale(1.0155) translateZ(0);
+        }
+        32% {
+          transform: scale(1.016) translateZ(0);
+        }
+        33% {
+          transform: scale(1.0165) translateZ(0);
+        }
+        34% {
+          transform: scale(1.017) translateZ(0);
+        }
+        35% {
+          transform: scale(1.0175) translateZ(0);
+        }
+        36% {
+          transform: scale(1.018) translateZ(0);
+        }
+        37% {
+          transform: scale(1.0185) translateZ(0);
+        }
+        38% {
+          transform: scale(1.019) translateZ(0);
+        }
+        39% {
+          transform: scale(1.0195) translateZ(0);
+        }
+        40% {
+          transform: scale(1.020) translateZ(0);
+        }
+        41% {
+          transform: scale(1.0205) translateZ(0);
+        }
+        42% {
+          transform: scale(1.021) translateZ(0);
+        }
+        43% {
+          transform: scale(1.02075) translateZ(0);
+        }
+        44% {
+          transform: scale(1.0205) translateZ(0);
+        }
+        45% {
+          transform: scale(1.01975) translateZ(0);
+        }
+        46% {
+          transform: scale(1.019) translateZ(0);
+        }
+        47% {
+          transform: scale(1.0185) translateZ(0);
+        }
+        48% {
+          transform: scale(1.018) translateZ(0);
+        }
+        49% {
+          transform: scale(1.0175) translateZ(0);
+        }
+        50% {
+          transform: scale(1.017) translateZ(0);
+        }
+        51% {
+          transform: scale(1.0165) translateZ(0);
+        }
+        52% {
+          transform: scale(1.016) translateZ(0);
+        }
+        53% {
+          transform: scale(1.0155) translateZ(0);
+        }
+        54% {
+          transform: scale(1.015) translateZ(0);
+        }
+        55% {
+          transform: scale(1.0145) translateZ(0);
+        }
+        56% {
+          transform: scale(1.014) translateZ(0);
+        }
+        57% {
+          transform: scale(1.0135) translateZ(0);
+        }
+        58% {
+          transform: scale(1.013) translateZ(0);
+        }
+        59% {
+          transform: scale(1.0125) translateZ(0);
+        }
+        60% {
+          transform: scale(1.012) translateZ(0);
+        }
+        61% {
+          transform: scale(1.0115) translateZ(0);
+        }
+        62% {
+          transform: scale(1.011) translateZ(0);
+        }
+        63% {
+          transform: scale(1.0105) translateZ(0);
+        }
+        64% {
+          transform: scale(1.010) translateZ(0);
+        }
+        65% {
+          transform: scale(1.0095) translateZ(0);
+        }
+        66% {
+          transform: scale(1.009) translateZ(0);
+        }
+        67% {
+          transform: scale(1.0085) translateZ(0);
+        }
+        68% {
+          transform: scale(1.008) translateZ(0);
+        }
+        69% {
+          transform: scale(1.0075) translateZ(0);
+        }
+        70% {
+          transform: scale(1.007) translateZ(0);
+        }
+        71% {
+          transform: scale(1.0065) translateZ(0);
+        }
+        72% {
+          transform: scale(1.006) translateZ(0);
+        }
+        73% {
+          transform: scale(1.0055) translateZ(0);
+        }
+        74% {
+          transform: scale(1.005) translateZ(0);
+        }
+        75% {
+          transform: scale(1.0045) translateZ(0);
+        }
+        76% {
+          transform: scale(1.004) translateZ(0);
+        }
+        77% {
+          transform: scale(1.004) translateZ(0);
+        }
+        78% {
+          transform: scale(1.004) translateZ(0);
+        }
+        79% {
+          transform: scale(1.0035) translateZ(0);
+        }
+        80% {
+          transform: scale(1.003) translateZ(0);
+        }
+        81% {
+          transform: scale(1.003) translateZ(0);
+        }
+        82% {
+          transform: scale(1.003) translateZ(0);
+        }
+        83% {
+          transform: scale(1.00275) translateZ(0);
+        }
+        84% {
+          transform: scale(1.0025) translateZ(0);
+        }
+        85% {
+          transform: scale(1.00225) translateZ(0);
+        }
+        86% {
+          transform: scale(1.002) translateZ(0);
+        }
+        87% {
+          transform: scale(1.00175) translateZ(0);
+        }
+        88% {
+          transform: scale(1.0015) translateZ(0);
+        }
+        89% {
+          transform: scale(1.00125) translateZ(0);
+        }
+        90% {
+          transform: scale(1.001) translateZ(0);
+        }
+        91% {
+          transform: scale(1.0009) translateZ(0);
+        }
+        92% {
+          transform: scale(1.0008) translateZ(0);
+        }
+        93% {
+          transform: scale(1.00065) translateZ(0);
+        }
+        94% {
+          transform: scale(1.0005) translateZ(0);
+        }
+        95% {
+          transform: scale(1.00035) translateZ(0);
+        }
+        96% {
+          transform: scale(1.0002) translateZ(0);
+        }
+        98% {
+          transform: scale(1.0001) translateZ(0);
+        }
+        100% {
+          transform: scale(1) translateZ(0);
+        }
       }
 
       .cta h3 {
@@ -351,8 +670,8 @@
             </p>
 
             <div class="actions">
-              <a href="#contact" class="btn btn-primary">Book a call</a>
-              <a href="#services" class="btn btn-secondary">See services</a>
+              <a href="#contact" id="book-call-btn" class="btn btn-primary">Book a call</a>
+              <a href="#services" id="see-services-btn" class="btn btn-secondary">See services</a>
             </div>
 
             <div class="trust">
@@ -394,7 +713,7 @@
             <p>Simple, strategic support for businesses that want a stronger digital footprint.</p>
           </div>
 
-          <div class="features">
+          <div class="features" id="service-cards">
             <article class="card feature">
               <div class="icon">01</div>
               <h3>Brand Design</h3>
@@ -418,7 +737,7 @@
 
       <section id="contact" class="section">
         <div class="container">
-          <div class="card cta">
+          <div class="card cta" id="cta-card">
             <h3>Ready to launch something memorable?</h3>
             <p style="color: var(--muted); max-width: 650px; margin: 0 auto 20px;">
               Let’s build a clean, modern experience that reflects your vision and helps your brand grow.
@@ -428,6 +747,46 @@
         </div>
       </section>
     </main>
+
+    <script>
+      const bookCallButton = document.getElementById('book-call-btn');
+      const ctaCard = document.getElementById('cta-card');
+      const seeServicesButton = document.getElementById('see-services-btn');
+      const serviceCards = document.querySelectorAll('.feature');
+
+      const triggerPulse = (element, className) => {
+        element.classList.remove(className);
+        void element.offsetWidth;
+        element.classList.add(className);
+      };
+
+      const triggerPulseGroup = (elements, className) => {
+        elements.forEach((element) => element.classList.remove(className));
+        requestAnimationFrame(() => {
+          elements.forEach((element) => element.classList.add(className));
+        });
+      };
+
+      if (bookCallButton && ctaCard) {
+        ctaCard.addEventListener('animationend', () => {
+          ctaCard.classList.remove('cta-pulse');
+        });
+
+        bookCallButton.addEventListener('click', () => triggerPulse(ctaCard, 'cta-pulse'));
+      }
+
+      serviceCards.forEach((card) => {
+        card.addEventListener('animationend', () => {
+          card.classList.remove('cta-pulse');
+        });
+      });
+
+      if (seeServicesButton && serviceCards.length) {
+        seeServicesButton.addEventListener('click', () => {
+          triggerPulseGroup(Array.from(serviceCards), 'cta-pulse');
+        });
+      }
+    </script>
 
     <footer>
     </footer>
