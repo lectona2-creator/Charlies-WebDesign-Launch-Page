@@ -1,11 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Carlitos is a modern website for a local business or personal brand, published with GitHub Pages."
+    />
+    <title>Carlitos | Modern Local Brand</title>
+    <style>
+      :root {
+        --bg: #0f172a;
+        --panel: #111827;
+        --card: #1f2937;
+        --primary: #f59e0b;
+        --secondary: #f97316;
+        --text: #e5e7eb;
+        --muted: #cbd5e1;
+        --accent: #34d399;
+        --shadow: rgba(15, 23, 42, 0.35);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: linear-gradient(135deg, #020817, #0f172a 40%, #111827);
+        color: var(--text);
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        background: rgba(15, 23, 42, 0.78);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+      }
+
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 72px;
+      }
+
+      .brand {
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .brand span {
+        color: var(--primary);
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 24px;
+        color: var(--muted);
+        font-size: 0.96rem;
+      }
+
+      .nav-links a:hover {
+        color: white;
+      }
+
+      .hero {
+        padding: 92px 0 72px;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 14px;
+        border: 1px solid rgba(245, 158, 11, 0.4);
+        border-radius: 999px;
+        background: rgba(245, 158, 11, 0.08);
+        color: #fed7aa;
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 18px;
+      }
+
+      h1 {
+        font-size: clamp(2.8rem, 5vw, 5rem);
+        line-height: 1.05;
+        margin: 0 0 20px;
+      }
+
+      .highlight {
+        color: var(--primary);
+      }
+
+      .lead {
+        font-size: 1.1rem;
+        color: var(--muted);
+        max-width: 620px;
+        margin-bottom: 30px;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-bottom: 30px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 52px;
+        padding: 0 22px;
+        border-radius: 999px;
+        font-weight: 700;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #1f2937;
+        box-shadow: 0 12px 32px rgba(245, 158, 11, 0.28);
+      }
+
+      .btn-secondary {
+        border: 1px solid rgba(148, 163, 184, 0.35);
+        background: rgba(15, 23, 42, 0.4);
+        color: var(--text);
+      }
+
+      .trust {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .card {
+        background: linear-gradient(180deg, rgba(31, 41, 55, 0.9), rgba(17, 24, 39, 0.95));
+        border: 1px solid rgba(148, 163, 184, 0.18);
+        border-radius: 28px;
+        box-shadow: 0 28px 70px var(--shadow);
+      }
+
+      .hero-visual {
+        padding: 24px;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 20px;
+      }
+
+      .stat {
+        background: rgba(15, 23, 42, 0.75);
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 18px;
+        padding: 18px 16px;
+      }
+
+      .stat strong {
+        display: block;
+        font-size: 1.7rem;
+        color: white;
+      }
+
+      .stat span {
+        color: var(--muted);
+        font-size: 0.85rem;
+      }
+
+      .section {
+        padding: 48px 0;
+      }
+
+      .section-head {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .section-head h2 {
+        margin: 0 0 10px;
+        font-size: clamp(2rem, 4vw, 3rem);
+      }
+
+      .section-head p {
+        margin: 0 auto;
+        color: var(--muted);
+        max-width: 700px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .feature {
+        padding: 28px 22px;
+      }
+
+      .feature .icon {
+        width: 54px;
+        height: 54px;
+        border-radius: 16px;
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.18), rgba(52, 211, 153, 0.12));
+        color: var(--primary);
+        margin-bottom: 18px;
+      }
+
+      .feature h3 {
+        margin: 0 0 12px;
+        font-size: 1.3rem;
+      }
+
+      .feature p {
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .cta {
+        padding: 28px;
+        text-align: center;
+      }
+
+      .cta h3 {
+        margin-top: 0;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+      }
+
+      footer {
+        padding: 28px 0 40px;
+        color: var(--muted);
+        text-align: center;
+      }
+
+      @media (max-width: 800px) {
+        .hero-grid,
+        .features {
+          grid-template-columns: 1fr;
+        }
+
+        .nav {
+          flex-direction: column;
+          justify-content: center;
+          padding: 16px 0;
+          gap: 12px;
+        }
+
+        .nav-links {
+          gap: 14px;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav">
+        <a href="#home" class="brand">Carl<span>itos</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Fresh ideas</div>
+            <h1>Build your next <span class="highlight">big impression</span> with Carlitos.</h1>
+            <p class="lead">
+              We create polished digital experiences for small brands, startups, and modern businesses.
+              Clean design, thoughtful strategy, and smooth execution — all in one place.
+            </p>
+
+            <div class="actions">
+              <a href="#contact" class="btn btn-primary">Book a call</a>
+              <a href="#services" class="btn btn-secondary">See services</a>
+            </div>
+
+            <div class="trust">
+              <span>Trusted by 120+ clients</span>
+              <span>•</span>
+              <span>Fast turnaround</span>
+              <span>•</span>
+              <span>Built for growth</span>
+            </div>
+          </div>
+
+          <div class="card hero-visual" aria-label="Business summary panel">
+            <div class="stats">
+              <div class="stat">
+                <strong>5x</strong>
+                <span>Faster launches</span>
+              </div>
+              <div class="stat">
+                <strong>98%</strong>
+                <span>Client satisfaction</span>
+              </div>
+              <div class="stat">
+                <strong>24/7</strong>
+                <span>Online presence</span>
+              </div>
+            </div>
+            <div style="margin-top: 22px; padding: 18px; border-radius: 18px; background: rgba(17, 24, 39, 0.9); border: 1px solid rgba(148, 163, 184, 0.15);">
+              <p style="margin: 0 0 8px; color: var(--muted);">Featured project</p>
+              <h3 style="margin: 0; font-size: 1.5rem;">Brand refresh for a growing local business</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>Modern presence. Real results.</h2>
+            <p>
+              Carlitos blends strategy, design, and storytelling to help businesses stand out online with clarity and confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section">
+        <div class="container">
+          <div class="section-head">
+            <h2>What we offer</h2>
+            <p>Simple, strategic support for businesses that want a stronger digital footprint.</p>
+          </div>
+
+          <div class="features">
+            <article class="card feature">
+              <div class="icon">01</div>
+              <h3>Brand Design</h3>
+              <p>Distinct visuals and messaging that connect with your audience at a glance.</p>
+            </article>
+
+            <article class="card feature">
+              <div class="icon">02</div>
+              <h3>Web Presence</h3>
+              <p>Responsive websites that look great on every screen and keep visitors engaged.</p>
+            </article>
+
+            <article class="card feature">
+              <div class="icon">03</div>
+              <h3>Growth Support</h3>
+              <p>Conversion-focused improvements that help your business get noticed and remembered.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section">
+        <div class="container">
+          <div class="card cta">
+            <h3>Ready to launch something memorable?</h3>
+            <p style="color: var(--muted); max-width: 650px; margin: 0 auto 20px;">
+              Let’s build a clean, modern experience that reflects your vision and helps your brand grow.
+            </p>
+            <a href="mailto:hello@carlitos.example" class="btn btn-primary">hello@carlitos.example</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">© 2026 Carlitos. Built for the web.</div>
+    </footer>
+  </body>
 </html>
