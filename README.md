@@ -1,6 +1,6 @@
-# Charlie
+# Carlitos
 
-A simple static website for the Charlie brand.
+A simple static website for the Carlitos brand.
 
 ## GitHub Pages publishing
 
